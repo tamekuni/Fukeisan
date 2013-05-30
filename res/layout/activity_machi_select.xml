@@ -82,7 +82,7 @@
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp" >
+                    android:layout_marginBottom="10dp" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -104,7 +104,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ryanmen" />
+                        android:background="@null"
+                        android:src="@drawable/ryanmen_btn" />
                 </TableRow>
 
                 <!-- シャボ -->
@@ -112,7 +113,7 @@
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp" >
+                    android:layout_marginBottom="10dp" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -134,7 +135,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/shabo" />
+                        android:background="@null"
+                        android:src="@drawable/shabo_btn" />
                 </TableRow>
 
                 <!-- 嵌張 -->
@@ -142,7 +144,7 @@
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp" >
+                    android:layout_marginBottom="10dp" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -164,7 +166,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/kanchan" />
+                        android:background="@null"
+                        android:src="@drawable/kanchan_btn" />
                 </TableRow>
 
                 <!-- 辺張 -->
@@ -172,7 +175,7 @@
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp" >
+                    android:layout_marginBottom="10dp" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -194,7 +197,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/penchan" />
+                        android:background="@null"
+                        android:src="@drawable/penchan_btn" />
                 </TableRow>
 
                 <!-- 単騎 -->
@@ -202,7 +206,7 @@
                 <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp" >
+                    android:layout_marginBottom="10dp" >
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -224,18 +228,21 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/tanki" />
+                        android:background="@null"
+                        android:src="@drawable/tanki_btn" />
                 </TableRow>
 
                 <!-- OK、消す -->
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" >
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
+                        android:layout_height="wrap_content"
+                        android:splitMotionEvents="false" >
 
                         <Button
                             android:id="@+id/btnDel"
