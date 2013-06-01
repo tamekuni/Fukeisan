@@ -47,10 +47,10 @@
     <string name="han2">2翻</string>
     <string name="han3">3翻</string>
     <string name="han4">4翻</string>
-    <string name="mangan">満貫</string>
-    <string name="haneman">跳満</string>
-    <string name="baiman">倍満</string>
-    <string name="sanbaiman">三倍満</string>
-    <string name="yakuman">役満</string>
+    <string name="mangan">5翻\n(満貫)</string>
+    <string name="haneman">6～7翻\n(跳満)</string>
+    <string name="baiman">8～10翻\n(倍満)</string>
+    <string name="sanbaiman">11～12翻\n(三倍満)</string>
+    <string name="yakuman">13翻～\n(役満)</string>
 
 </resources>
