@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jp.gr.java_conf.tamekuni.fukeisan"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0.0" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -12,7 +12,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Black" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="jp.gr.java_conf.tamekuni.fukeisan.InputActivity"
             android:label="@string/app_name" >
@@ -27,6 +27,12 @@
             android:label="@string/app_name" />
         <activity
             android:name="jp.gr.java_conf.tamekuni.fukeisan.MachiSelectActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="jp.gr.java_conf.tamekuni.fukeisan.PointDispActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="jp.gr.java_conf.tamekuni.fukeisan.MjPointTableActivity"
             android:label="@string/app_name" />
     </application>
 

@@ -92,6 +92,11 @@ public class InputActivityManager implements InputActivityManagerIF {
 	}
 
 	@Override
+	public int getCurTotalFu() {
+		return mCur.getTotalFu();
+	}
+
+	@Override
 	public void setCurMentsu(Mentsu aMentsu1, Mentsu aMentsu2, Mentsu aMentsu3,
 			Mentsu aMentsu4, boolean aIsRefUi) {
 
