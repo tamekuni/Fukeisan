@@ -6,8 +6,11 @@ import jp.gr.java_conf.tamekuni.fukeisan.public_enum.Agari;
 import jp.gr.java_conf.tamekuni.fukeisan.public_enum.Jyanto;
 import jp.gr.java_conf.tamekuni.fukeisan.public_enum.Machi;
 import jp.gr.java_conf.tamekuni.fukeisan.public_enum.Mentsu;
+import jp.gr.java_conf.tamekuni.fukeisan.public_enum.ParentChild;
 import jp.gr.java_conf.tamekuni.fukeisan.public_enum.Yaku;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -33,12 +36,13 @@ public class InputActivity extends Activity {
 		mIAMgr = new InputActivityManager(mIdInfo);
 		mActivity = this;
 
-		// コールバック
+		// ボタンが押された時の動作
 		setListenerYaku();
 		setListenerMentsuSelect();
 		setListenerJyanto();
 		setListenerMachiSelect();
 		setListenerAgari();
+		setListnerPointDisp();
 		setListenerClear();
 	}
 
@@ -120,7 +124,6 @@ public class InputActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO 自動生成されたメソッド・スタブ
 		super.onActivityResult(requestCode, resultCode, data);
 
 		if (data == null) {
@@ -136,6 +139,28 @@ public class InputActivity extends Activity {
 			break;
 		default:
 			break;
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.menu_mj_point_table, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_mj_point_table:
+			Intent intent = new Intent(getApplicationContext(),
+					MjPointTableActivity.class);
+			startActivity(intent);
+
+			return true;
+
+		default:
+			return super.onOptionsItemSelected(item);
 		}
 	}
 
@@ -218,9 +243,8 @@ public class InputActivity extends Activity {
 
 	private void setListenerMachiSelect() {
 		Button btnMachi = mIdInfo.getInfoMachi().getBtnMachiSelectId();
-		// TODO
-		btnMachi.setOnClickListener(new View.OnClickListener() {
 
+		btnMachi.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
@@ -259,6 +283,39 @@ public class InputActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				mIAMgr.setCurAgari(Agari.FURO_RON, true);
+			}
+		});
+	}
+
+	private void setListnerPointDisp() {
+		Button btnParent = mIdInfo.getBtnParentPointId();
+		Button btnChild = mIdInfo.getBtnChildPointId();
+
+		btnParent.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),
+						PointDispActivity.class);
+
+				intent.putExtra("TotalFuValue", mIAMgr.getCurTotalFu());
+				intent.putExtra("Agari", mIAMgr.getCurAgari().toIndex());
+				intent.putExtra("ParentChild", ParentChild.PARENT.toIndex());
+
+				startActivity(intent);
+			}
+		});
+
+		btnChild.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(),
+						PointDispActivity.class);
+
+				intent.putExtra("TotalFuValue", mIAMgr.getCurTotalFu());
+				intent.putExtra("Agari", mIAMgr.getCurAgari().toIndex());
+				intent.putExtra("ParentChild", ParentChild.CHILD.toIndex());
+
+				startActivity(intent);
 			}
 		});
 	}

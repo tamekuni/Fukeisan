@@ -117,10 +117,10 @@ public class MentsuSelectActivityManager implements
 		TextView tvMentsu3Type = mIdInfo.getTextViewMentsu3TypeId();
 		TextView tvMentsu4Type = mIdInfo.getTextViewMentsu4TypeId();
 
-		tvMentsu1Fu.setText(String.valueOf(getMentsu1().toPoint()));
-		tvMentsu2Fu.setText(String.valueOf(getMentsu2().toPoint()));
-		tvMentsu3Fu.setText(String.valueOf(getMentsu3().toPoint()));
-		tvMentsu4Fu.setText(String.valueOf(getMentsu4().toPoint()));
+		tvMentsu1Fu.setText(String.format("%2d", getMentsu1().toPoint()));
+		tvMentsu2Fu.setText(String.format("%2d", getMentsu2().toPoint()));
+		tvMentsu3Fu.setText(String.format("%2d", getMentsu3().toPoint()));
+		tvMentsu4Fu.setText(String.format("%2d", getMentsu4().toPoint()));
 
 		imgvMentsu1.setImageResource(mImgId.getImageRId(getMentsu1()));
 		imgvMentsu2.setImageResource(mImgId.getImageRId(getMentsu2()));

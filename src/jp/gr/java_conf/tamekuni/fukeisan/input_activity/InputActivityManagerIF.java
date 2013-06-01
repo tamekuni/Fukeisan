@@ -26,6 +26,8 @@ public interface InputActivityManagerIF {
 
 	public Agari getCurAgari();
 
+	public int getCurTotalFu();
+
 	public void setCurMentsu(Mentsu aMentsu1, Mentsu aMentsu2, Mentsu aMentsu3,
 			Mentsu aMentsu4, boolean aIsRefUi);
 
