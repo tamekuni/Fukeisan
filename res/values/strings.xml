@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">麻雀符計さん!!</string>
+    <string name="app_name">麻雀符計算!!</string>
     <string name="mjPointTable">点数表</string>
     <string name="yakuNormal">通常役</string>
     <string name="yakuPinfu">平和</string>
